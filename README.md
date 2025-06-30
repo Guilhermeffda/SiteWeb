@@ -1,5 +1,5 @@
 # Loja Online com Ruby on Rails
-
+PS: eu acabei por sem querer apagar o antigo repositorio, por isso que vai aparecer que foi tudo mandado de uma vez
 Este é um projeto desenvolvido seguindo o livro **Agile Web Development with Rails 7**. O objetivo é construir uma loja virtual simples utilizando o framework **Ruby on Rails**, com funcionalidades completas de gerenciamento de produtos, carrinho de compras, pedidos e envio de notificações por e-mail.
 
 (O site esta com alguns problemas na parte dos test, mas nada que afete o site principal. E tambem tive que remover a parte do Docker temporariamente, mas eu voltarei a mexer nele no futuro)
