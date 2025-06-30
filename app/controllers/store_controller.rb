@@ -1,7 +1,10 @@
 
 # Aqui definimos o controlador StoreController
 # que será responsável por exibir a lista de produtos
-# na nossa loja virtual.
+# na nossa loja virtual
+
+# Essa pagina não sera necessario esta logado para ela aparecer
+# e aqui tambem teremos as mudancas de idioma
 
 class StoreController < ApplicationController
   skip_before_action :authorize
