@@ -56,5 +56,31 @@ class ProductTest < ActiveSupport::TestCase
         product.errors[:title]
   end
 
+  test "should reject invalid image URLs" do
+    invalid_urls = [
+      "javascript:alert('hacked')",
+      "http://malicious.com/script.jpg?execute=true",
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA",
+      "image.png<script>malicious()</script>"
+    ]
+    
+    invalid_urls.each do |url|
+      product = Product.new(image_url: url)
+      assert_not product.valid?, "#{url} não deve ser válido"
+    end
+  end
+
+  test "should accept valid image URLs" do
+    valid_urls = [
+      "http://exemplo.com/imagem.jpg",
+      "https://secure-site.com/foto.png",
+      "https://cdn.exemplo.com/images/photo.gif"
+    ]
+    
+    valid_urls.each do |url|
+      product = Product.new(image_url: url)
+      assert product.valid?, "#{url} deve ser válido"
+    end
+  end
 
 end

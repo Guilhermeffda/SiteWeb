@@ -22,11 +22,10 @@ class Product < ApplicationRecord
     validates :title, uniqueness: true
     # Aqui vai checar se o formato esta entre URL para GIF, JPG ou PNG, caso não for, não sera permitido
         # Usamos as expressões regulares para validar caracteres apos o ponto
-    validates :image_url, allow_blank: true, format: {
-        with:
-        %r{\.(gif|jpg|png)\z}i,
-        message: 'Deve ser uma URL para GIF, JPG ou PNG.'
-    }           #o "\z" indica o fim de uma String, e o "i" transforma todos o caracteres em minúsculos(no caso os que buscamos)
+   validates :image_url, allow_blank: true, format: {
+        with: /\Ahttps?:\/\/.+(\.(gif|jpg|png))\z/i,
+        message: 'deve ser uma URL válida para imagem GIF, JPG ou PNG'
+    }         #o "\z" indica o fim de uma String, e o "i" transforma todos o caracteres em minúsculos(no caso os que buscamos)
 
 
     # Esse método é chamado antes de um produto ser destruído
