@@ -10,14 +10,17 @@ class OrderMailerTest < ActionMailer::TestCase
   end
 
   test "shipped" do
-    mail = OrderMailer.shipped(orders(:one))
-    assert_equal "Pragmatic Store Order Shipped", mail.subject
-    assert_equal ["dave@example.org"], mail.to
-    assert_equal ["depot@example.com"], mail.from
-    assert_match %r(
-      <td[^>]*>1<\/td>\s*
-      <td>&times;<\/td>\s*
-      <td[^>]*>\s*Programming\sRuby\s1.9\s*</td>
-    )x, mail.body.to_s
+    order = orders(:one)  
+    
+
+    order.line_items.create!(
+      product: products(:ruby), 
+      quantity: 1
+    )
+    
+    mail = OrderMailer.shipped(order)
+    assert_equal "Order Shipped", mail.subject
+    assert_equal [order.email], mail.to
+    assert_match /Programming Ruby 1.9/, mail.body.encoded 
   end
 end

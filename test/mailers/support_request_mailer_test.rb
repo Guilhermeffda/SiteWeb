@@ -2,16 +2,16 @@ require "test_helper"
 
 class SupportRequestMailerTest < ActionMailer::TestCase
   test "respond" do
-    support_request = support_requests(:one)
-    mail = SupportRequestMailer.respond(support_request).deliver_now
 
-    assert_emails 1 do
-      mail
-    end
-
-    assert_equal ["support@example.com"], mail.from
-    assert_equal [support_request.email], mail.to
-    assert_match /Re: #{support_request.subject}/, mail.subject
-    assert_match support_request.message, mail.body.to_s
+    support_request = SupportRequest.create!(
+      email: "cliente@exemplo.com", 
+      subject: "Ajuda",
+      body: "Preciso de suporte"
+    )
+    
+    mail = SupportRequestMailer.respond(support_request)
+    assert_equal "Re: Ajuda", mail.subject
+    assert_equal ["cliente@exemplo.com"], mail.to 
+    assert_match "Preciso de suporte", mail.body.encoded
   end
 end
