@@ -6,7 +6,6 @@ class SessionsController < ApplicationController
   end
 
   def create
-
       user = User.find_by(name: params[:name])
 
       if user&.authenticate(params[:password])
@@ -15,7 +14,6 @@ class SessionsController < ApplicationController
       else
         redirect_to login_url, alert: "Invalid user/password combination"
       end
-
   end
 
   def destroy
@@ -24,5 +22,4 @@ class SessionsController < ApplicationController
     redirect_to store_index_url, notice: "Logged out"
   
   end
-
 end

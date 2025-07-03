@@ -34,6 +34,3 @@ class ActionDispatch::IntegrationTest
     login_as users(:one)
   end
 end
-
-
-

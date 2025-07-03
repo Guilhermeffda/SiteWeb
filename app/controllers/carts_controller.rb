@@ -1,5 +1,4 @@
 class CartsController < ApplicationController
-
   skip_before_action :authorize, only: %i[ create update destroy ]
 
   before_action :set_cart, only: %i[ show edit update destroy ]
@@ -81,5 +80,4 @@ class CartsController < ApplicationController
     logger.error "Attempt to access invalid cart #{params[:id]}"
     redirect_to store_index_url, notice: "Invalid cart"
     end
-
 end

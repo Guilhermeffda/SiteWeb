@@ -1,5 +1,4 @@
 class OrdersController < ApplicationController
-
   skip_before_action :authorize, only: %i[ new create ]
 
   include CurrentCart
@@ -70,9 +69,10 @@ class OrdersController < ApplicationController
   end
 
   # Aqui vai ser feito tres coisas
-    # Primeiro,vai adaptar os pay_type_params que você acabou de criar aos parâmetros que o Pago
-    # Segundo, faz um chamado para o Pago para coletar o pagamento
-    # Por ultimo, vai checar se o pagamento nao teve problemas, e vai mandar um email de confirmação, mas só se nn houver erros
+  # Primeiro, vai adaptar os pay_type_params que você acabou de criar aos parâmetros que o Pago
+  # Segundo, faz um chamado para o Pago para coletar o pagamento
+  # Por ultimo, vai checar se o pagamento nao teve problemas, e vai mandar um email de confirmação, mas só se nn houver erros
+
 
   def pay_type_params
     if order_params[:pay_type] == "Credit card"
@@ -103,5 +103,4 @@ class OrdersController < ApplicationController
         redirect_to store_index_url, notice: "Your cart is empty"
       end
     end
-
 end

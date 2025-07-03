@@ -6,4 +6,3 @@ LANGUAGES = [
   ["Spanish", :es],
   ["Portuguese", :pt]
 ]
-
