@@ -20,7 +20,7 @@ class Product < ApplicationRecord
     # Aqui vai checar se o formato está entre URL para GIF, JPG ou PNG, caso não for, não será permitido
     # Usamos as expressões regulares para validar caracteres após o ponto
     validates :image_url, allow_blank: true, format: {
-        with: %r{\.(gif|jpg|png)\z}i,
+        with: %r{\.(gif|jpg|png)([?#].*)?\z}i,
         message: "deve terminar com .gif, .jpg ou .png"
     }
 

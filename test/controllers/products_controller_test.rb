@@ -16,12 +16,16 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should create product" do
-    assert_difference("Product.count") do
-      post products_url, params: { product: { description: @product.description,
-      image_url: @product.image_url,
-      price: @product.price,
-      title: @title } }
+test "should create product" do
+  assert_difference("Product.count") do
+    post products_url, params: {
+      product: {
+        title: "Novo Produto",
+        description: "Descrição do novo produto",
+        image_url: "produto.jpg",
+        price: 9.99
+        }
+      }
     end
 
     assert_redirected_to product_url(Product.last)
@@ -38,12 +42,16 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update product" do
-    patch product_url(@product), params: { product: { description: @product.description,
-    image_url: @product.image_url,
-    price: @product.price,
-    title: @title }
+  patch product_url(@product), params: {
+    product: {
+      title: "Produto Atualizado",
+      image_url: "atualizado.png"
+    }
   }
+
     assert_redirected_to product_url(@product)
+    @product.reload
+    assert_equal "Produto Atualizado", @product.title
   end
 
   # Aqui definimos que não podemos deletar um produto que esteja no carrinho
