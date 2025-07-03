@@ -63,7 +63,7 @@ class ProductTest < ActiveSupport::TestCase
       "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA",
       "image.png<script>malicious()</script>"
     ]
-    
+
     invalid_urls.each do |url|
       product = Product.new(image_url: url)
       assert_not product.valid?, "#{url} não deve ser válido"
@@ -76,7 +76,7 @@ class ProductTest < ActiveSupport::TestCase
       "https://secure-site.com/foto.png",
       "https://cdn.exemplo.com/images/photo.gif"
     ]
-    
+
     valid_urls.each do |url|
       product = Product.new(image_url: url)
       assert product.valid?, "#{url} deve ser válido"

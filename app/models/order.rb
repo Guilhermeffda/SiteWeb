@@ -1,6 +1,6 @@
 
-require 'active_model/serializers/xml'
-require Rails.root.join('lib', 'tasks', 'pago')
+require "active_model/serializers/xml"
+require Rails.root.join("lib", "tasks", "pago")
 
 class Order < ApplicationRecord
     has_many :line_items, dependent: :destroy

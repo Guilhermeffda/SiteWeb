@@ -1,7 +1,7 @@
 
 
 # Nesse arquivo, você pode criar registros iniciais para o banco de dados.
-# Aqui estamos populando a tabela de produtos com um produto 
+# Aqui estamos populando a tabela de produtos com um produto
 
 # Lembre-se de que este arquivo é executado apenas uma vez, quando você executa o comando bin/rails db:seed
 # Se você quiser adicionar mais produtos, basta seguir o mesmo padrão abaixo.

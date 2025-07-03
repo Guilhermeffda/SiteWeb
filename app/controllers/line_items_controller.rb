@@ -33,12 +33,12 @@ class LineItemsController < ApplicationController
       if @line_item.save
         format.turbo_stream { @current_item = @line_item }
         format.html { redirect_to store_index_url}
-        format.json { render :show, 
+        format.json { render :show,
           status: :created, location: @line_item }
       else
         format.html { render :new,
           status: :unprocessable_entity }
-        format.json { render json: @line_item.errors, 
+        format.json { render json: @line_item.errors,
           status: :unprocessable_entity }
       end
     end

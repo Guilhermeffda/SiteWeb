@@ -35,7 +35,7 @@ gem "bootsnap", require: false
 
 # Faz o Rails usar o ActiveModel::Serializers para serializar objetos em XML
 # Isso é útil quando você precisa gerar respostas XML em vez de JSON.
-gem 'activemodel-serializers-xml'
+gem "activemodel-serializers-xml"
 
 
 # Faz a gente poder criptografar senhas de usuários

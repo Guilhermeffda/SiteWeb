@@ -29,7 +29,7 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
   post line_items_url, params: { product_id: products(:ruby).id }
 
   assert_difference("Order.count") do
-      post orders_url, params: { order: { 
+      post orders_url, params: { order: {
         address: @order.address,
         email: @order.email,
         name: @order.name,
