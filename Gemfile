@@ -37,7 +37,6 @@ gem "bootsnap", require: false
 # Isso é útil quando você precisa gerar respostas XML em vez de JSON.
 gem "activemodel-serializers-xml"
 
-
 # Faz a gente poder criptografar senhas de usuários
 # e autenticar usuários de forma segura.
 gem "bcrypt", "~> 3.1.7"

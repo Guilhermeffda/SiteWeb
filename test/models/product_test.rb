@@ -9,7 +9,6 @@
 # Testa URLs válidas e inválidas
 # Utiliza fixtures para carregar dados de teste
 
-
 require "test_helper"
 
 class ProductTest < ActiveSupport::TestCase
@@ -45,14 +44,13 @@ class ProductTest < ActiveSupport::TestCase
     end
   end
 
-
   test "product is not valid without a unique title" do
     product = Product.new(title:  products(:ruby).title,
         description: "yyy",
         price:  1,
         image_url:  "fred.gif")
     assert product.invalid?
-    assert_equal [I18n.translate('errors.messages.taken')],
+    assert_equal [ I18n.translate("errors.messages.taken") ],
         product.errors[:title]
   end
 
@@ -82,5 +80,4 @@ class ProductTest < ActiveSupport::TestCase
       assert product.valid?, "#{url} deve ser válido"
     end
   end
-
 end

@@ -4,8 +4,8 @@ class OrderMailerTest < ActionMailer::TestCase
   test "received" do
     mail = OrderMailer.received(orders(:one))
     assert_equal "Pragmatic Store Order Confirmation", mail.subject
-    assert_equal ["dave@example.org"], mail.to
-    assert_equal ["depot@example.com"], mail.from
+    assert_equal [ "dave@example.org" ], mail.to
+    assert_equal [ "depot@example.com" ], mail.from
     assert_match /1 x Programming Ruby 1.9/, mail.body.encoded
   end
 
@@ -19,7 +19,7 @@ class OrderMailerTest < ActionMailer::TestCase
 
     mail = OrderMailer.shipped(order)
     assert_equal "Order Shipped", mail.subject
-    assert_equal [order.email], mail.to
+    assert_equal [ order.email ], mail.to
     assert_match /Programming Ruby 1.9/, mail.body.encoded
   end
 end

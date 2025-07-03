@@ -10,9 +10,7 @@ class Product < ApplicationRecord
     # Aquio é um callback que chama o método ensure_not_referenced_by_nay_line_item
     before_destroy :ensure_not_referenced_by_nay_line_item
 
-
-
-        # O validates checa se os atributos estão preenchidos
+    # O validates checa se os atributos estão preenchidos
     # O presence faz com que o atributo seja obrigatório
     validates :title, :description, :image_url, presence: true
     # Aqui fazemos com que para o numero seja so valido se for maior ou igual a 0.01
@@ -25,7 +23,6 @@ class Product < ApplicationRecord
       with: /\Ahttps?:\/\/.+(\.(gif|jpg|png))\z/i,
       message: "deve ser uma URL válida para imagem GIF, JPG ou PNG"
     } # o "\z" indica o fim de uma String, e o "i" transforma todos os caracteres em minúsculos (no caso os que
-
 
     # Esse método é chamado antes de um produto ser destruído
     # Ele verifica se o produto está referenciado por algum item de linha.

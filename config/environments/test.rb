@@ -54,5 +54,4 @@ Rails.application.configure do
   config.active_storage.service = :test
 
   config.action_mailbox.ingress = :test
-
 end

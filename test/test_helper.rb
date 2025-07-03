@@ -19,10 +19,10 @@ class ActionDispatch::IntegrationTest
     if respond_to? :visit
       visit login_url
       fill_in :name, with: user.name
-      fill_in :password, with: 'secret'
-      click_on 'Login'
+      fill_in :password, with: "secret"
+      click_on "Login"
     else
-      post login_url, params: { name: user.name, password: 'secret' }
+      post login_url, params: { name: user.name, password: "secret" }
     end
   end
 

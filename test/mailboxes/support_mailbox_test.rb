@@ -1,7 +1,6 @@
 require "test_helper"
 
 class SupportMailboxTest < ActionMailbox::TestCase
-
   test "we create a SupportRequest when we get a support email" do
     receive_inbound_email_from_mail(
       to: "support@example.com",
@@ -36,5 +35,4 @@ class SupportMailboxTest < ActionMailbox::TestCase
     assert_equal "I can't figure out how to check out!!", support_request.body
     assert_equal recent_order, support_request.order
   end
-
 end

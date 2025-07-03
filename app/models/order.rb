@@ -14,7 +14,6 @@ class Order < ApplicationRecord
     validates :name, :address, :email, presence: true
     validates :pay_type, inclusion: pay_types.keys
 
-
     def add_line_items_from_cart(cart)
         cart.line_items.each do |item|
             item.cart_id = nil
@@ -24,7 +23,6 @@ class Order < ApplicationRecord
 
     # Esse metodo é resposavel por preocessar o pagamento
     def charge!(pay_type_params)
-
         # Cria um hash vazio para armazenardetalhes da compra
         # E cria uma variavel para guardar qual foi o metodo de compra
         payment_details = {}

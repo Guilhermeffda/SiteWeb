@@ -3,7 +3,7 @@ require "test_helper"
 class ProductsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @product = products(:one)
-    @title = "The graet book"#{rand(1000)}
+    @title = "The graet book"
   end
 
   test "should get index" do
@@ -61,3 +61,4 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to products_url
   end
+end

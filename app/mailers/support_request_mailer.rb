@@ -1,5 +1,4 @@
 class SupportRequestMailer < ApplicationMailer
-
   default from: "support@example.com"
 
   def respond(support_request)
