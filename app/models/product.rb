@@ -19,10 +19,8 @@ class Product < ApplicationRecord
     validates :title, uniqueness: true
     # Aqui vai checar se o formato está entre URL para GIF, JPG ou PNG, caso não for, não será permitido
     # Usamos as expressões regulares para validar caracteres após o ponto
-    validates :image_url, allow_blank: true, format: {
-        with: %r{\.(gif|jpg|png)([?#].*)?\z}i,
-        message: "deve terminar com .gif, .jpg ou .png"
-    }
+    validates :image_url, allow_blank: true, format: 
+    { with: /\A[^?#]+\.(gif|jpg|png)([?#].*)?\z/i, message: "must be a URL for GIF, JPG or PNG image." }
 
     # Esse método é chamado antes de um produto ser destruído
     # Ele verifica se o produto está referenciado por algum item de linha.
