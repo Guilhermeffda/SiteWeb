@@ -1,10 +1,8 @@
-
-
 <div class="w-full">
   <%= render 'notice' %>
 
   <h1 class="font-bold text-xl mb-6 pb-2 border-b-2">
-    <%= t('.title_html')%>
+    <%= t('.title_html') %>
   </h1>
 
   <%= turbo_stream_from 'products' %>
