@@ -63,7 +63,8 @@ Este é um projeto desenvolvido seguindo o livro **Agile Web Development with Ra
 ## Usando Docker (opcional)
 Você também pode rodar o projeto com Docker. Veja as instruções no arquivo Dockerfile e docker-compose.yml.
 
-  ![image](https://github.com/user-attachments/assets/9300bbf5-a0ef-403b-938e-b63014634f34)
+<img width="1831" height="920" alt="Captura de tela de 2025-06-26 14-25-54" src="https://github.com/user-attachments/assets/c460161e-8c75-4a45-aa39-c68f574f9d99" />
+
 
 ## ✨ Funcionalidades do Site
 
@@ -74,11 +75,11 @@ O site é uma loja virtual simples. Ele permite que os usuários explorem produt
 - **Visualização de produtos**: A página inicial exibe uma lista com os produtos disponíveis, com nome, descrição, preço e imagem. Aqui tambem pode ser mudado a lingua do site, tendo como opções Inglês, Português e Espanhol, nas imagens irei seguir usando a lingua Inglesa.
 - **Adição ao carrinho**: O cliente pode adicionar produtos ao carrinho de compras com um clique.
 
-  ![image](https://github.com/user-attachments/assets/4ec14a84-4630-4556-aa25-d16111f644bd)
+<img width="1831" height="920" alt="Captura de tela de 2025-06-26 14-32-30" src="https://github.com/user-attachments/assets/97a25de0-fa9d-4463-96b3-f29bb1221f20" />
 
 - **Gerenciamento do carrinho**:
 
-  ![image](https://github.com/user-attachments/assets/3a3933f8-34ba-41da-a8de-de676144fbbe)
+<img width="1016" height="393" alt="Captura de tela de 2025-06-26 14-37-42" src="https://github.com/user-attachments/assets/a254c061-0396-48c6-a108-92cc2a70355b" />
 
   - Visualizar todos os itens no carrinho
   - Remover produtos individualmente
@@ -88,34 +89,34 @@ O site é uma loja virtual simples. Ele permite que os usuários explorem produt
   - Ao enviar o pedido, o carrinho é esvaziado automaticamente
   - Caso voce tente fazer um pedido sem preencher alguma informação ira aparecer uma mensagem lhe avisando
     
-  ![image](https://github.com/user-attachments/assets/62579609-10ed-438e-bc08-e81a1dcdf82d)
+<img width="1828" height="911" alt="Captura de tela de 2025-06-26 14-39-38" src="https://github.com/user-attachments/assets/0ccaacc7-0d23-4dd2-8be8-7a051de0a600" />
 
 - **Confirmação por e-mail**: Um e-mail automático é enviado ao cliente confirmando o pedido.
 
 ### 🔐 Para Administradores
 
 - **Autenticação básica**: O painel administrativo é protegido por login e senha.
-  ![image](https://github.com/user-attachments/assets/d559e694-3bf9-464e-bfaa-7a9fa981e259)
+<img width="893" height="538" alt="Captura de tela de 2025-06-26 15-04-23" src="https://github.com/user-attachments/assets/db8278cf-33ae-4887-9d5d-6ca8eaf3eff6" />
 
 - A adição do usuario pode ser feita de dois jeitos, com um usuario criando um outro usuario dentro do proprio site, na pagina de users
   
-  ![image](https://github.com/user-attachments/assets/cd16f76b-1ede-48ce-8133-5316fc21093d)
+<img width="893" height="538" alt="Captura de tela de 2025-06-26 15-08-06" src="https://github.com/user-attachments/assets/6ebe1f16-56cd-481a-8c20-2889ac0d152c" />
 
 - E o outro metodo é necessario adicionar um usuario dentro do proprio banco de dados.
 
 - **Gerenciamento de produtos**:
   Ao acessar a pagina Products como administradores podemos interagir com os produtos
 
-  ![image](https://github.com/user-attachments/assets/a634c4ad-0876-433d-9ac9-7a5de1131b46)
+<img width="868" height="898" alt="Captura de tela de 2025-06-26 15-12-06" src="https://github.com/user-attachments/assets/5d4b1980-e09f-4577-8b6c-ce2eaa066998" />
 
   - Criar, editar e excluir produtos
   - Upload de imagens e definição de preços
   - 
-  ![image](https://github.com/user-attachments/assets/ff86b925-c480-4106-88ce-4ced8de03cee)
+<img width="598" height="720" alt="Captura de tela de 2025-06-26 15-13-04" src="https://github.com/user-attachments/assets/26df9a09-25d1-4260-a7a9-0a2b0367e491" />
     
 - **Visualização de pedidos**:
   
-  ![image](https://github.com/user-attachments/assets/75266696-8516-4659-b74d-28b97bc37da0)
+<img width="883" height="778" alt="Captura de tela de 2025-06-26 15-16-33" src="https://github.com/user-attachments/assets/71570927-e0d6-4601-b735-4d7160fa29b0" />
 
   - Lista completa dos pedidos realizados
   - Acesso aos detalhes de cada pedido (nome, endereço, produtos comprados, etc.)
@@ -123,7 +124,7 @@ O site é uma loja virtual simples. Ele permite que os usuários explorem produt
 - **Notificação por e-mail**:
   (Os emails só são recebidos se forem mandados atravez da http://localhost:3000/rails/conductor/action_mailbox/inbound_emails, já que é apenas um site de desenvolvimento para teste optei por não colocar com emails reais)
   
-  ![image](https://github.com/user-attachments/assets/6be5cc16-d25b-4442-92f5-fcd30adbca59)
+<img width="990" height="793" alt="Captura de tela de 2025-06-26 15-23-26" src="https://github.com/user-attachments/assets/e07d245d-e269-4377-b4f1-608ea28a8089" />
   (Eu irei formatar melhor no futuro, por enquanto o essa parte esta meio "seca")
 
   - O administrador recebe uma notificação por e-mail sempre que um novo pedido é feito, podendo responder ele e enviar.
