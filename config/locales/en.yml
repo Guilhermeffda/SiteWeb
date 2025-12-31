@@ -12,7 +12,7 @@ en:
     index:
       title_html: "Your Pragmatic Store"
     product:
-      add_html: "add to cart"
+      add_html: "Add to Cart"
 
   carts:
     cart:
@@ -36,7 +36,7 @@ en:
         name: "Name"
         address_html: "Address"
         email: "E-mail"
-        pay_type: "Pay with"
+        pay_type: "Pay type"
         pay_prompt_html: "Select a payment method"
         submit: "Place Order"
       pay_types:
@@ -47,10 +47,10 @@ en:
         routing_number: "Routing number"
         account_number: "Account number"
       cc:
-        cc_number: "CC number"
-        expiration_date: "Expiry"
+        cc_number: "Credit card number"
+        expiration_date: "Expiration date"
       po:
-        po_number: "PO number"
+        po_number: "Po number"
 
   activerecord:
     errors:
