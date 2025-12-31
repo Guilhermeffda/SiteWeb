@@ -62,17 +62,17 @@ class UsersController < ApplicationController
   end
 
   rescue_from "User::Error" do |exception|
-    redirect_to users_url, notice: excepition.mesesage
+    redirect_to users_url, notice: exception.message
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
-      @user = User.find(params.expect(:id))
+      @user = User.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.expect(user: [ :name, :password, :password_confirmation ])
+      params.require(:user).permit(:name, :password, :password_confirmation)
     end
 end

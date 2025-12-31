@@ -2,6 +2,8 @@
 require "rubygems"
 require "bundler/setup"
 
-ARGV.unshift("--ensure-latest")
+# Avoid failing CI when a newer Brakeman is available.
+# The CI step already pins `--no-pager`; removing `--ensure-latest`
+# prevents exit code 5 (outdated) and lets the scan run normally.
 
 load Gem.bin_path("brakeman", "brakeman")
