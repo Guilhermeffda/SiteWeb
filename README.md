@@ -8,7 +8,7 @@ Este é um projeto desenvolvido seguindo o livro **Agile Web Development with Ra
 
 (Caso voce tente rodar o projeto em uma maquina com sistema operacional Windows, alguns comandos serão diferentes, os comandos a baixo são para linux, no meu caso o Ubuntu)
 
-## ✨ Funcionalidades
+## Funcionalidades
 
 - Listagem e visualização de produtos
 - Adição de produtos ao carrinho de compras
@@ -17,7 +17,7 @@ Este é um projeto desenvolvido seguindo o livro **Agile Web Development with Ra
 - Envio de e-mails de confirmação de pedido
 - Área administrativa para gerenciar produtos e pedidos
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - Ruby on Rails 7/8
 - SQLite3 (banco de dados local)
@@ -26,7 +26,7 @@ Este é um projeto desenvolvido seguindo o livro **Agile Web Development with Ra
 - Action Mailer (envio de e-mails)
 - Docker (opcional)
 
-## ⚙️ Como Rodar Localmente
+## Como Rodar Localmente
 
 ### Pré-requisitos
 
@@ -66,11 +66,11 @@ Você também pode rodar o projeto com Docker. Veja as instruções no arquivo D
 <img width="1831" height="920" alt="Captura de tela de 2025-06-26 14-25-54" src="https://github.com/user-attachments/assets/c460161e-8c75-4a45-aa39-c68f574f9d99" />
 
 
-## ✨ Funcionalidades do Site
+## Funcionalidades do Site
 
 O site é uma loja virtual simples. Ele permite que os usuários explorem produtos e realizem pedidos, enquanto os administradores podem gerenciar os itens da loja.
 
-### 🛍️ Para Visitantes / Clientes
+### Para Visitantes / Clientes
 
 - **Visualização de produtos**: A página inicial exibe uma lista com os produtos disponíveis, com nome, descrição, preço e imagem. Aqui tambem pode ser mudado a lingua do site, tendo como opções Inglês, Português e Espanhol, nas imagens irei seguir usando a lingua Inglesa.
 - **Adição ao carrinho**: O cliente pode adicionar produtos ao carrinho de compras com um clique.
@@ -93,7 +93,7 @@ O site é uma loja virtual simples. Ele permite que os usuários explorem produt
 
 - **Confirmação por e-mail**: Um e-mail automático é enviado ao cliente confirmando o pedido.
 
-### 🔐 Para Administradores
+### Para Administradores
 
 - **Autenticação básica**: O painel administrativo é protegido por login e senha.
 <img width="893" height="538" alt="Captura de tela de 2025-06-26 15-04-23" src="https://github.com/user-attachments/assets/db8278cf-33ae-4887-9d5d-6ca8eaf3eff6" />
